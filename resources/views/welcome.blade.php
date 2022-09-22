@@ -9,9 +9,15 @@
 
     </head>
     <body>
-    <h1>Hello world</h1>
+    <h2>Welcome to ...</h2>
+    <h1>Star Wars Blog</h1>
 
-    <a href="/test">go to hello world</a>
+    <a href="/test">go to blog posts!</a>
+
+
+
+
+
 
     </body>
 </html>

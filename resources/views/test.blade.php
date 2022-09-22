@@ -9,9 +9,13 @@
 
 </head>
 <body>
-<h1>Hello world (again)</h1>
+<h1>Hello fellow star wars fan!</h1>
 
-<a href="/welcome">go back to normal world world</a>
+
+
+
+
+<a href="/welcome">go back to home page</a>
 
 </body>
 </html>
