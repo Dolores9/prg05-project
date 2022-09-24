@@ -15,12 +15,11 @@ return new class extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreignId('user_id')->constrained('users');
             $table->string('user_name');
             $table->string('title');
             $table->string('interest');
             $table->text('description');
-            $table->date('date');
             $table->timestamps();
         });
     }
