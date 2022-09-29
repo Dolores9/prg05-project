@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,10 +18,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('posts', function () {
-    return view('posts');
-
-});
+//Route::get('posts', function () {
+//    return view('posts');
+//
+//});
+Route::get('posts', [PostController::class, 'index']);
 
 Auth::routes();
 
