@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\PostController;
+use App\Http\Controllers\InterestController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -23,7 +23,7 @@ use Illuminate\Support\Facades\Route;
 //    return view('posts');
 //
 //});
-Route::get('/posts', [PostController::class, 'index']);
+Route::get('/posts', [interestController::class, 'show']);
 
 Auth::routes();
 

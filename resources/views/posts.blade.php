@@ -18,6 +18,13 @@
                  <td>Interest</td>
                  <td> Description</td>
              </tr>
+             @foreach($interests as $interest)
+             <tr>
+                 <td>{{$interest['id']}} </td>
+                 <td>{{$interest['interest']}}</td>
+                 <td>{{$interest['description']}}</td>
+             </tr>
+             @endforeach()
          </table>
 
 
