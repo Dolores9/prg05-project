@@ -24,9 +24,9 @@
 <h1>Star Wars Blog</h1>
 
 <ul>
-    <li> <a href="">blog posts</a></li>
-    <li><a href="">about this blog</a></li>
-    <li><a href=""> log in</a></li>
+    <li><a href="">about this site</a></li>
+    <li><a href="/create">post something</a> </li>
+
 </ul>
 
 
