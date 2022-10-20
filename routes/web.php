@@ -24,7 +24,13 @@ use Illuminate\Support\Facades\Route;
 //
 //});
 
+Route::get('/search', [InterestController::class, 'search']);
+
+
 Auth::routes();
+
+
+
 
 Route::get('home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
@@ -34,3 +40,5 @@ Route::resource('interests', InterestController::class);
 Route::get('admin', [\App\Http\Controllers\Admin\AdminController::class, 'show'])->name('admin')->middleware('admin');
 
 Route::get('/deleteProduct/{id}', [App\Http\Controllers\InterestController::class, 'delete'])->name('delete');
+
+

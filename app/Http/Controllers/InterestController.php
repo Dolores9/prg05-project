@@ -35,15 +35,19 @@ class InterestController extends Controller
     public function store(Request $request)
     {
 
-            $request->validate([
+            $validated = $request->validate([
             'interest' => 'required|in:Force users,History,Empire',
             'title' => 'required|min:5|max:300',
             'description' => 'required',
 //            'date' => 'required|date',
             ]);
 
+            $user_id = ['user_id'=> Auth::user()->id ];
 
-            Interest::create($request->all());
+            $interest_fields = array_merge($validated, $user_id);
+
+
+            Interest::create($interest_fields);
             return redirect()->route('interests.index');
 
 
@@ -61,9 +65,17 @@ class InterestController extends Controller
 
 
 
-//        $interest = interest::find($id);
-//        $interest->delete();
-//        return redirect()->route('interests.index')->with(['message'=> 'Successfully deleted!!']);
+    }
+
+    public function search(){
+
+        $search_text = $_GET['search'];
+        $interests = Interest::where('interest','like','%'. $search_text. '%');
+
+//        dd($search_text);
+
+
+        return view('interests.index', compact('interests'));
     }
 }
 
