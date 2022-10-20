@@ -67,12 +67,12 @@ class InterestController extends Controller
 
     }
 
-    public function search(){
+    public function search(Request $request){
 
-        $search_text = $_GET['search'];
-        $interests = Interest::where('interest','like','%'. $search_text. '%');
+        $search_text =$request->query('search');
+        $interests = Interest::where('interest','like','%'. $search_text. '%')->get();
 
-//        dd($search_text);
+
 
 
         return view('interests.index', compact('interests'));
