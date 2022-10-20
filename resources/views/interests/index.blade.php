@@ -9,34 +9,13 @@
 
          </article>
 
-
-         <table>
-             <tr>
-                 <td>Interest</td>
-                 <td> Description</td>
-             </tr>
-             @foreach($interests as $interest)
+         @foreach($interests as $interest)
                  <h1>{{$interest['title']}}</h1>
 
+                 {{$interest['interest']}}
+                 {{$interest['description']}}
+         @endforeach
 
-             <tr>
-                 <td>{{$interest['interest']}}</td>
-                 <td>{{$interest['description']}}</td>
-             </tr>
-
-
-                 <a href="{{route('delete', ['id' => $interest['id']])}}" >delete</a>
-             @endforeach
-         </table>
-
-
-
-         <a href="">edit</a>
-{{--         <a href="{{route('delete', ['id' => $interest['id']])}}" >delete</a>--}}
-
-
-
-
-
-<a href="{{route('home')}} ">go back to home page</a>
+         <br>
+         <a href="{{route('home')}} ">go back to home page</a>
 @endsection

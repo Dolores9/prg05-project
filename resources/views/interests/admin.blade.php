@@ -3,11 +3,27 @@
 
 @section('content')
 
-<h1> hallo admin</h1>
+
 @if(Auth::user()->admin)
-    <h1> hallo admin</h1>
+
 @endif
 
+
+
+@foreach($interests as $interest)
+    <h1>{{$interest['title']}}</h1>
+
+
+
+    {{$interest['interest']}}
+    {{$interest['description']}}
+    <a href="{{route('delete', ['id' => $interest['id']])}}" >delete</a>
+{{--    <a href="{{route('edit',['id'=> $interest['id]']])}}">edit</a>--}}
+
+
+
+
+@endforeach
 
 
 
