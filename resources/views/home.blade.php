@@ -25,7 +25,8 @@
 
 <ul>
     <li><a href="">about this site</a></li>
-    <li><a href="/create">post something</a> </li>
+    <li><a href="{{route('interests.create')}}">post something</a> </li>
+    <li><a href="{{route('admin.index')}}">Admin?</a> </li>
 
 </ul>
 
@@ -35,6 +36,6 @@
 
 
 
-<a href="/posts">go to blog posts!</a>
+<a href="{{route('interests.index')}}">go to blog posts!</a>
 
 @endsection

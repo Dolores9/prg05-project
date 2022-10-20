@@ -10,4 +10,6 @@ class Interest extends Model
     use HasFactory;
 
     protected $table = 'interests';
+    protected $fillable = ['interest','title','description'];
+
 }

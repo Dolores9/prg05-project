@@ -28,6 +28,11 @@
 
 
 
+         <a href="">edit</a>
+         <a href="">delete</a>
+
+
+
 
 
 <a href="{{route('home')}} ">go back to home page</a>

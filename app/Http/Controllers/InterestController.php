@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\App;
 use App\Models\Interest;
@@ -21,7 +22,11 @@ class InterestController extends Controller
 
     public function create()
     {
-        return view('interests.create');
+        if (Auth::user()->admin) {
+            return view('interests.create');
+        } else {
+            abort(403);
+        }
 
     }
 

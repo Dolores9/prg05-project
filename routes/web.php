@@ -23,13 +23,12 @@ use Illuminate\Support\Facades\Route;
 //    return view('posts');
 //
 //});
-Route::get('/posts', [InterestController::class, 'show']);
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/create', function () {
-    return view('create');
-});
+
 Route::resource('interests', InterestController::class);
+
+Route::resource('admin',App\Http\Controllers\Admin\AdminController::class);
