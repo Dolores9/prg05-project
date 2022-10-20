@@ -23,13 +23,16 @@
                  <td>{{$interest['interest']}}</td>
                  <td>{{$interest['description']}}</td>
              </tr>
-             @endforeach()
+
+
+                 <a href="{{route('delete', ['id' => $interest['id']])}}" >delete</a>
+             @endforeach
          </table>
 
 
 
          <a href="">edit</a>
-         <a href="">delete</a>
+{{--         <a href="{{route('delete', ['id' => $interest['id']])}}" >delete</a>--}}
 
 
 

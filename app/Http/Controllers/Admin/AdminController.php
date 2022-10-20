@@ -21,6 +21,16 @@ class AdminController extends Controller
 
     }
 
+
+    public function show(){
+        $interests = Interest::all();
+
+        return view('interests.admin', compact('interests'));
+
+    }
+
+
+
     public function create()
     {
         if (Auth::user()->admin) {

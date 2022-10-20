@@ -44,13 +44,30 @@ class InterestController extends Controller
 
 
             Interest::create($request->all());
-            return(view('interests.index'));
+            return redirect()->route('interests.index');
 
 
 
     }
 
+    public function delete($id){
 
+        $interest =Interest::where('id',$id)->first();
+
+        if ($interest != null) {
+            $interest->delete();
+            return redirect()->route('interests.index')->with(['message'=> 'Successfully deleted!!']);
+        }
+
+
+
+//        $interest = interest::find($id);
+//        $interest->delete();
+//        return redirect()->route('interests.index')->with(['message'=> 'Successfully deleted!!']);
+    }
 }
+
+
+
 
 

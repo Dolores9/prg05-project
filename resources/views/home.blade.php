@@ -26,7 +26,7 @@
 <ul>
     <li><a href="">about this site</a></li>
     <li><a href="{{route('interests.create')}}">post something</a> </li>
-    <li><a href="{{route('admin.index')}}">Admin?</a> </li>
+    <li><a href="{{route('admin')}}">Admin?</a> </li>
 
 </ul>
 
