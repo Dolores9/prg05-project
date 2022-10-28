@@ -22,11 +22,12 @@ class InterestController extends Controller
 
     public function create()
     {
-        if (Auth::user()->admin) {
-            return view('interests.create');
-        } else {
-            abort(403);
-        }
+//        if (Auth::user()->admin) {
+//            return view('interests.create');
+//        } else {
+//            abort(403);
+//        }
+        return view('interests.create');
 
     }
 
@@ -77,7 +78,10 @@ class InterestController extends Controller
 
         return view('interests.index', compact('interests'));
     }
+
+
 }
+
 
 
 

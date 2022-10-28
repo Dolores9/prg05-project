@@ -25,6 +25,10 @@ use Illuminate\Support\Facades\Route;
 //});
 
 Route::get('/search', [InterestController::class, 'search']);
+Route::get('/',function () {
+return view('auth.login');
+
+});
 
 
 Auth::routes();
@@ -40,5 +44,4 @@ Route::resource('interests', InterestController::class);
 Route::get('admin', [\App\Http\Controllers\Admin\AdminController::class, 'show'])->name('admin')->middleware('admin');
 
 Route::get('/deleteProduct/{id}', [App\Http\Controllers\InterestController::class, 'delete'])->name('delete');
-
 

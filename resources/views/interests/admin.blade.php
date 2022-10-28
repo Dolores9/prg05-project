@@ -18,7 +18,7 @@
     {{$interest['interest']}}
     {{$interest['description']}}
     <a href="{{route('delete', ['id' => $interest['id']])}}" >delete</a>
-{{--    <a href="{{route('edit',['id'=> $interest['id]']])}}">edit</a>--}}
+{{--    <a href="{{route('interests.edit')}}">edit</a>--}}
 
 
 
